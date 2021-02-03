@@ -1,16 +1,10 @@
 import AppLayout from './views/AppLayout/AppLayout';
+import Products from './views/Products/Products';
 
 const Root = () => (
   <div>
     <AppLayout>
-      <header>
-        <p>
-          Edit <code>src/Root.tsx</code> and save to reload.
-        </p>
-        <a href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
+      <Products />
     </AppLayout>
   </div>
 );

@@ -1,7 +1,11 @@
 import { PropsWithChildren, ReactNode } from 'react';
+import Header from './Header/Header';
 
 const AppLayout = ({ children }: PropsWithChildren<ReactNode>) => (
-  <div>{children}</div>
+  <>
+    <Header />
+    <div>{children}</div>
+  </>
 );
 
 export default AppLayout;
