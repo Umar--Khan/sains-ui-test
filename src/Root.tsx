@@ -1,18 +1,18 @@
+import AppLayout from './views/AppLayout/AppLayout';
+
 const Root = () => (
-    <div>
+  <div>
+    <AppLayout>
       <header>
         <p>
           Edit <code>src/Root.tsx</code> and save to reload.
         </p>
-        <a
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
           Learn React
         </a>
       </header>
-    </div>
-  );
+    </AppLayout>
+  </div>
+);
 
 export default Root;
