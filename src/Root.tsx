@@ -1,12 +1,16 @@
-import AppLayout from './views/AppLayout/AppLayout';
-import Products from './views/Products/Products';
+import { BrowserRouter } from 'react-router-dom';
+
+import Routes from 'routing/Routes';
+import AppLayout from 'AppLayout';
+
+import 'index.scss';
 
 const Root = () => (
-  <div>
+  <BrowserRouter>
     <AppLayout>
-      <Products />
+      <Routes />
     </AppLayout>
-  </div>
+  </BrowserRouter>
 );
 
 export default Root;

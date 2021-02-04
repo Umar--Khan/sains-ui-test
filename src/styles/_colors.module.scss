@@ -1,0 +1,25 @@
+$orange: #f06c00;
+$orangeDark: #e55000;
+$black: #000;
+$greyDark: #262626;
+$grey: #737373;
+$greyLight: #d8d8d8;
+$greyVeryLight: #f2f2f2;
+$green: #2e7d32;
+$yellow: #ffd600;
+$red: #d50000;
+$white: #fff;
+
+:export {
+  orange: $orange;
+  orangeDark: $orangeDark;
+  black: $black;
+  greyDark: $greyDark;
+  grey: $grey;
+  greyLight: $greyLight;
+  greyVeryLight: $greyVeryLight;
+  green: $green;
+  yellow: $yellow;
+  red: $red;
+  white: $white;
+}
