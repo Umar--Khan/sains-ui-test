@@ -4,8 +4,7 @@ import { ROUTES_MAP } from 'const/routes';
 
 const NotFound = () => (
   <div>
-    Looks like you're lost. Go to{' '}
-    <Link to={ROUTES_MAP.PRODUCTS}>homepage.</Link>
+    Looks like you're lost. Go to <Link to={ROUTES_MAP.HOME}>homepage.</Link>
   </div>
 );
 
