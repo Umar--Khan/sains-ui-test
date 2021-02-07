@@ -1,10 +1,10 @@
 import { createContext, PropsWithChildren, useMemo } from 'react';
-import { SelectedProduct } from 'views/Store/Store.d';
-import useLocalStorage from 'hooks/useLocalStorage';
+import { BasketProduct } from 'src/views/Store/Store.d';
+import useLocalStorage from 'src/hooks/useLocalStorage';
 
-interface BasketWrapper {
+export interface BasketWrapper {
   setBasketLocal: (arg: any) => void;
-  basketLocal: SelectedProduct[];
+  basketLocal: BasketProduct[];
 }
 
 const BasketContext = createContext({} as BasketWrapper);

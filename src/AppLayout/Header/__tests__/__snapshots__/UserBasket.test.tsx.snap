@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserBasket /> Should render correctly 1`] = `
+<span
+  data-testid="number-in-basket"
+>
+  Basket (
+  2
+   items)
+</span>
+`;

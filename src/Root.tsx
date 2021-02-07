@@ -1,10 +1,10 @@
 import { BrowserRouter } from 'react-router-dom';
 
-import Routes from 'routing/Routes';
-import AppLayout from 'AppLayout';
-import { BasketProvider } from 'context/BasketContext';
+import Routes from 'src/routing/Routes';
+import AppLayout from 'src/AppLayout';
+import { BasketProvider } from 'src/context/BasketContext';
 
-import 'index.scss';
+import 'src/index.scss';
 
 const Root = () => (
   <BrowserRouter>

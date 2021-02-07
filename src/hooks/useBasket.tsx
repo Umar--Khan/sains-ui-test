@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Product } from 'views/Store/Store.d';
+import { Product } from 'src/views/Store/Store.d';
 
 const useBasket = () => {
   const [basketData, setBasketData] = useState<Product[]>([]);

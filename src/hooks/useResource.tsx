@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import axiosConfig from 'axios/axiosConfig';
-import { HTTP_METHODS } from 'const/httpMethods';
+import axiosConfig from 'src/axios/axiosConfig';
+import { HTTP_METHODS } from 'src/const/httpMethods';
 
 export interface UseResourceProps {
   url: string;

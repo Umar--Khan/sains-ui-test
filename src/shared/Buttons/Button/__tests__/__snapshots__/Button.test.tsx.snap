@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> Should render correctly 1`] = `
+<button
+  aria-label="button-aria-label"
+  className="sc-bdfBwQ ibNfPE button-class-name"
+  id="button-id"
+  name="button-name"
+>
+  Button
+</button>
+`;

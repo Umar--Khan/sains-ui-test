@@ -1,8 +1,16 @@
 import { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
-import { ButtonProps } from './Button.d';
-import * as colors from 'styles/_colors.module.scss';
+import * as colors from 'src/styles/_colors.module.scss';
+
+import { MouseEventHandler } from 'react';
+
+export interface ButtonProps {
+  ariaLabel?: string;
+  className?: string;
+  id?: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+}
 
 const StyledButton = styled.button`
   background-color: ${colors.orange};
@@ -21,16 +29,16 @@ const StyledButton = styled.button`
 const Button = ({
   children,
   className,
-  color,
   id,
   onClick,
+  ariaLabel,
   ...rest
 }: PropsWithChildren<ButtonProps>) => (
   <StyledButton
     className={className}
-    color={color}
     id={id}
     onClick={onClick}
+    aria-label={ariaLabel}
     {...rest}
   >
     {children}

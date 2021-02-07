@@ -1,8 +1,8 @@
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import NotFound from 'views/NotFound/NotFound';
+import NotFound from 'src/views/NotFound/NotFound';
+import { ROUTES_MAP } from 'src/const/routes';
 import routeMapping from './routeMapping';
-import { ROUTES_MAP } from 'const/routes';
 
 const Routes = () => (
   <Switch>

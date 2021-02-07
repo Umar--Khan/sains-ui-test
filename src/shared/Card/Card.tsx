@@ -1,7 +1,7 @@
-import { PropsWithChildren, ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
-import * as colors from 'styles/_colors.module.scss';
+import * as colors from 'src/styles/_colors.module.scss';
 
 const StyledCard = styled.div`
   padding: 1.5rem;
@@ -9,8 +9,8 @@ const StyledCard = styled.div`
   margin: 1rem 0;
 `;
 
-const Card = ({ children }: PropsWithChildren<ReactNode>) => (
-  <StyledCard>{children}</StyledCard>
+const Card = ({ children, ...rest }: PropsWithChildren<any>) => (
+  <StyledCard {...rest}>{children}</StyledCard>
 );
 
 export default Card;

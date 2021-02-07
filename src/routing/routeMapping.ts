@@ -1,8 +1,8 @@
-import Store from 'views/Store/Store';
-import Basket from 'views/Basket/Basket';
+import Store from 'src/views/Store/Store';
+import Basket from 'src/views/Basket/Basket';
 
 import { RouteMap } from './routeMapping.d';
-import { ROUTES_MAP } from 'const/routes';
+import { ROUTES_MAP } from 'src/const/routes';
 
 const routeMapping: RouteMap[] = [
   {

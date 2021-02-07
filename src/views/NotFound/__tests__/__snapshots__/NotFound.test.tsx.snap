@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFound /> Should render correctly 1`] = `
+<div>
+  Looks like you're lost. Go to 
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    homepage.
+  </a>
+</div>
+`;

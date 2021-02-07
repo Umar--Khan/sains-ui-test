@@ -1,12 +1,11 @@
 import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { ROUTES_MAP } from 'const/routes';
-import * as colors from 'styles/_colors.module.scss';
+import { ROUTES_MAP } from 'src/const/routes';
+import { BasketContext } from 'src/context/BasketContext';
+import * as colors from 'src/styles/_colors.module.scss';
 import UserBasket from './UserBasket';
-
-import { BasketContext } from 'context/BasketContext';
 
 const StyledHeader = styled.header`
   background-color: ${colors.white};
@@ -36,7 +35,7 @@ const HeaderContainer = styled.div`
   }
 `;
 
-const StyledLink = styled(NavLink)`
+const NavLink = styled(RouterNavLink)`
   margin-left: 1.25rem;
   text-decoration: none;
   font-size: 1.25rem;
@@ -58,9 +57,8 @@ const StyledLink = styled(NavLink)`
 const Header = () => {
   const { basketLocal } = useContext(BasketContext);
 
-  const itemsInBasket = basketLocal.reduce((acc, { quantity }) => {
-    acc = acc + quantity;
-
+  const itemsInBasket = basketLocal?.reduce<number>((acc, { quantity }) => {
+    acc += quantity;
     return acc;
   }, 0);
 
@@ -68,10 +66,10 @@ const Header = () => {
     <StyledHeader>
       <HeaderContainer>
         <NavContainer>
-          <StyledLink to={ROUTES_MAP.STORE}>Store</StyledLink>
-          <StyledLink to={ROUTES_MAP.BASKET}>
+          <NavLink to={ROUTES_MAP.STORE}>Store</NavLink>
+          <NavLink to={ROUTES_MAP.BASKET}>
             <UserBasket itemsInBasket={itemsInBasket ? itemsInBasket : 0} />
-          </StyledLink>
+          </NavLink>
         </NavContainer>
       </HeaderContainer>
     </StyledHeader>

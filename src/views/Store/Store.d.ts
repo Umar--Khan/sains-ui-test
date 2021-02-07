@@ -6,7 +6,7 @@ export interface Product {
   image: string;
 }
 
-export interface SelectedProduct {
+export interface BasketProduct {
   quantity: number;
-  product: Product;
+  productDetail: Product;
 }

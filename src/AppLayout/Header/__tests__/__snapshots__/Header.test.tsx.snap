@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> Should render correctly 1`] = `
+<header
+  className="sc-bdfBwQ JrDbG"
+>
+  <div
+    className="sc-dlfnbm cNcuHH"
+  >
+    <nav
+      className="sc-gsTCUz fHRLXO"
+    >
+      <a
+        aria-current={null}
+        className="sc-hKgILt cCXpce"
+        href="/store"
+        onClick={[Function]}
+      >
+        Store
+      </a>
+      <a
+        aria-current={null}
+        className="sc-hKgILt cCXpce"
+        href="/basket"
+        onClick={[Function]}
+      >
+        <span
+          data-testid="number-in-basket"
+        >
+          Basket (
+          0
+           items)
+        </span>
+      </a>
+    </nav>
+  </div>
+</header>
+`;

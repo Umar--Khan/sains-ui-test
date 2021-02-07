@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { ROUTES_MAP } from 'const/routes';
+import { ROUTES_MAP } from 'src/const/routes';
 
 const NotFound = () => (
   <div>
