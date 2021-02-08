@@ -1,17 +1,17 @@
 import { render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 
-import useResource from 'src/hooks/useResource';
+import useAxios from 'src/hooks/useAxios';
 import { mockedGetProducts } from 'src/testUtils/mocks/getProducts';
 import { storeTestIds } from 'src/testUtils/const/testIds';
 import Store from '../Store';
 
-jest.mock('src/hooks/useResource');
+jest.mock('src/hooks/useAxios');
 
 describe('<Store />', () => {
   describe('<Store /> Snapshots', () => {
     it('Setup', () => {
-      useResource.mockReturnValue({
+      useAxios.mockReturnValue({
         data: mockedGetProducts,
         isLoading: false,
         error: false,
@@ -21,7 +21,7 @@ describe('<Store />', () => {
     });
 
     it('Should render snapshot correctly', () => {
-      useResource.mockReturnValue({
+      useAxios.mockReturnValue({
         data: mockedGetProducts,
         isLoading: false,
         error: false,
@@ -32,7 +32,7 @@ describe('<Store />', () => {
     });
 
     it('Should render error snapshot correctly', () => {
-      useResource.mockReturnValue({
+      useAxios.mockReturnValue({
         data: [],
         isLoading: false,
         error: true,
@@ -43,7 +43,7 @@ describe('<Store />', () => {
     });
 
     it('Should render loading snapshot correctly', () => {
-      useResource.mockReturnValue({
+      useAxios.mockReturnValue({
         data: [],
         isLoading: true,
         error: false,
@@ -55,7 +55,7 @@ describe('<Store />', () => {
   });
 
   it('Should render correct amount of products', () => {
-    useResource.mockReturnValue({
+    useAxios.mockReturnValue({
       data: mockedGetProducts,
     });
     const { getAllByTestId } = render(<Store />);

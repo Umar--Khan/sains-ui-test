@@ -10,7 +10,7 @@ export interface UseResourceProps {
   headers?: Record<string, string>;
 }
 
-const useResource = ({
+const useAxios = ({
   url,
   method = HTTP_METHODS.GET,
   body,
@@ -20,6 +20,7 @@ const useResource = ({
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const fetchData = useCallback(async (): Promise<void> => {
     setIsLoading(true);
@@ -35,7 +36,8 @@ const useResource = ({
         setData(res.data);
       }
     } catch (error) {
-      setError(error);
+      setError(true);
+      setErrorMessage(error?.response?.data);
     }
     setIsLoading(false);
   }, [url]);
@@ -44,7 +46,7 @@ const useResource = ({
     fetchData();
   }, [fetchData]);
 
-  return { data, error, isLoading };
+  return { data, error, isLoading, errorMessage };
 };
 
-export default useResource;
+export default useAxios;

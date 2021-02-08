@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 
-import useResource from 'src/hooks/useResource';
+import useAxios from 'src/hooks/useAxios';
 import { BasketContext } from 'src/context/BasketContext';
 import endpoints from 'src/const/endpoints';
 import { storeTestIds } from 'src/testUtils/const/testIds';
@@ -12,7 +12,7 @@ const STORE_ERROR_MESSAGE =
 
 const Store = () => {
   const [products, setProducts] = useState<Product[] | null>(null);
-  const { data, error, isLoading } = useResource({
+  const { data, error, isLoading } = useAxios({
     url: endpoints.getProducts,
   });
 

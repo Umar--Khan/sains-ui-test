@@ -5,7 +5,7 @@ import { renderWithBasketContext, withRouter } from 'src/testUtils/helpers';
 import { headerTestIds } from 'src/testUtils/const/testIds';
 import Header from '../Header';
 
-jest.mock('src/hooks/useResource');
+jest.mock('src/hooks/useAxios');
 
 describe('<Header />', () => {
   it('Should render correctly', () => {
