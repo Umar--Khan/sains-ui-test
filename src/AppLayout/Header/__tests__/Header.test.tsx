@@ -13,7 +13,7 @@ describe('<Header />', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('Should render 0 items in basket if theyre no items in local storage', () => {
+  it('Should render 0 items & without price in basket if theyre no items in local storage', () => {
     const { getByTestId } = renderWithBasketContext(
       {
         basketLocal: [],
@@ -26,7 +26,7 @@ describe('<Header />', () => {
     expect(basketItem.textContent).toEqual('Basket (0 items)');
   });
 
-  it('Should render correct items number in basket if theyre items in local storage', () => {
+  it('Should render correct items number in basket & price if theyre items in local storage', () => {
     const { getByTestId } = renderWithBasketContext(
       {
         basketLocal: mockedLocalStorageBasketProducts,
@@ -36,6 +36,6 @@ describe('<Header />', () => {
     );
 
     const basketItem = getByTestId(headerTestIds.numberInBasket);
-    expect(basketItem.textContent).toEqual('Basket (8 items)');
+    expect(basketItem.textContent).toEqual('Basket (8 items, £171.94)');
   });
 });

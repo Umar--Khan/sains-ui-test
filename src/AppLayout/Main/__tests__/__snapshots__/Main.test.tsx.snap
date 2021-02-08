@@ -3,7 +3,7 @@
 exports[`<Main /> Should render correctly 1`] = `
 <main>
   <div
-    className="sc-bdfBwQ kGjSLo"
+    className="sc-bdfBwQ kzUylq"
   >
     Main
   </div>

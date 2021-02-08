@@ -2,19 +2,28 @@
 
 exports[`<ProductCard /> Should render correctly 1`] = `
 <div
-  className="sc-bdfBwQ bvTWIO"
+  className="sc-bdfBwQ fvoACg"
 >
   <img
     alt="Russell Hobbs Pennine Illuminating S Steel Kettle 20444"
+    className="sc-hKgILt eDdGvz"
     src="https://media.4rgos.it/s/Argos/9805244_R_SET?w=110&h=130"
   />
   <p>
     Russell Hobbs Pennine Illuminating S Steel Kettle 20444
-    , £
+    , 
+    <span
+      className="sc-dlfnbm bQGhrs"
+    >
+      549/3179
+    </span>
+  </p>
+  <p>
+    £
     24.99
   </p>
   <button
-    className="sc-gsTCUz fSmUuA"
+    className="sc-gsTCUz kiZIlZ"
     onClick={[Function]}
   >
     Add to basket

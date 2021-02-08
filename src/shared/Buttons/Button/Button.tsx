@@ -24,6 +24,16 @@ const StyledButton = styled.button`
   line-height: 1.5rem;
   border: 0;
   cursor: pointer;
+
+  &:hover {
+    background-color: ${colors.orangeDark};
+  }
+
+  &:active {
+    background-color: ${colors.orangeDark};
+    box-shadow: 0 5px ${colors.orangeDark};
+    transform: translateY(4px);
+  }
 `;
 
 const Button = ({

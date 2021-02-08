@@ -23,7 +23,6 @@ const HeaderContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   min-height: 4rem;
-  max-width: 90rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin: auto;
@@ -62,13 +61,21 @@ const Header = () => {
     return acc;
   }, 0);
 
+  const totalPriceBasket = basketLocal?.reduce<number>((acc, basketProduct) => {
+    acc += basketProduct.quantity * basketProduct.productDetail.price;
+    return parseFloat(acc.toFixed(2));
+  }, 0);
+
   return (
     <StyledHeader>
       <HeaderContainer>
         <NavContainer>
           <NavLink to={ROUTES_MAP.STORE}>Store</NavLink>
           <NavLink to={ROUTES_MAP.BASKET}>
-            <UserBasket itemsInBasket={itemsInBasket ? itemsInBasket : 0} />
+            <UserBasket
+              itemsInBasket={itemsInBasket ? itemsInBasket : 0}
+              totalPriceBasket={totalPriceBasket}
+            />
           </NavLink>
         </NavContainer>
       </HeaderContainer>

@@ -3,7 +3,7 @@
 exports[`<Button /> Should render correctly 1`] = `
 <button
   aria-label="button-aria-label"
-  className="sc-bdfBwQ ibNfPE button-class-name"
+  className="sc-bdfBwQ bTHpmN button-class-name"
   id="button-id"
   name="button-name"
 >

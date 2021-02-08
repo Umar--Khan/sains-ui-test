@@ -4,9 +4,8 @@ import styled from 'styled-components';
 const Container = styled.div`
   min-height: 50vh;
   max-width: 90rem;
-  margin: 4rem auto;
+  margin: 3rem auto;
   padding: 0 1rem;
-  width: 100%;
   @media (min-width: 720px) {
     padding: 0;
     width: 70%;

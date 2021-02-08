@@ -7,6 +7,9 @@ const StyledCard = styled.div`
   padding: 1.5rem;
   background-color: ${colors.white};
   margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Card = ({ children, ...rest }: PropsWithChildren<any>) => (

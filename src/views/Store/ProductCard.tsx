@@ -1,27 +1,31 @@
 import Card from 'src/shared/Card/Card';
 import { Button } from 'src/shared/Buttons';
 import { Product } from './Store.d';
+import styled from 'styled-components';
 
 export interface ProductCardProps {
   product: Product;
   handleOnClick: (arg: Product) => void;
 }
 
+const Sku = styled.span`
+  font-size: 0.8rem;
+  font-weight: 400;
+`;
+
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 const ProductCard = ({ product, handleOnClick, ...rest }: ProductCardProps) => (
   <Card key={product.sku} {...rest}>
-    <img src={product.image} alt={product.title} />
+    <Img src={product.image} alt={product.title} />
     <p>
-      {product.title}, &#163;{product.price}
+      {product.title}, <Sku>{product.sku}</Sku>
     </p>
-    {/*<label htmlFor='qty'>Qty:</label>*/}
-    {/*<Select*/}
-    {/*  name='qty'*/}
-    {/*  options={quantityOptions}*/}
-    {/*  onChange={() => {*/}
-    {/*    console.log();*/}
-    {/*  }}*/}
-    {/*  value={'1'}*/}
-    {/*/>*/}
+    <p>&#163;{product.price}</p>
     <Button onClick={() => handleOnClick(product)}>Add to basket</Button>
   </Card>
 );

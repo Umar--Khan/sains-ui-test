@@ -2,7 +2,7 @@
 
 exports[`<ReviewCard /> Should render correctly 1`] = `
 <div
-  className="sc-bdfBwQ bvTWIO"
+  className="sc-bdfBwQ fvoACg"
 >
   <img
     alt="Russell Hobbs Pennine Illuminating S Steel Kettle 20444"
@@ -14,11 +14,65 @@ exports[`<ReviewCard /> Should render correctly 1`] = `
     24.99
   </p>
   <p>
-    Qty: 
-    5
+    Qty:
+     
+    <select
+      onChange={[Function]}
+      value={5}
+    >
+      <option
+        value={1}
+      >
+        1
+      </option>
+      <option
+        value={2}
+      >
+        2
+      </option>
+      <option
+        value={3}
+      >
+        3
+      </option>
+      <option
+        value={4}
+      >
+        4
+      </option>
+      <option
+        value={5}
+      >
+        5
+      </option>
+      <option
+        value={6}
+      >
+        6
+      </option>
+      <option
+        value={7}
+      >
+        7
+      </option>
+      <option
+        value={8}
+      >
+        8
+      </option>
+      <option
+        value={9}
+      >
+        9
+      </option>
+    </select>
+  </p>
+  <p>
+    Total price: £
+    124.95
   </p>
   <button
-    className="sc-gsTCUz fSmUuA"
+    className="sc-gsTCUz kiZIlZ"
     onClick={[Function]}
   >
     Remove from basket

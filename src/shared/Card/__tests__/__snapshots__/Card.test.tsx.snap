@@ -2,7 +2,7 @@
 
 exports[`<Card /> Should render correctly 1`] = `
 <div
-  className="sc-bdfBwQ bvTWIO"
+  className="sc-bdfBwQ fvoACg"
 >
   Hello
 </div>

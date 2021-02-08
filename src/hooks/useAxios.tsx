@@ -40,6 +40,7 @@ const useAxios = ({
       setErrorMessage(error?.response?.data);
     }
     setIsLoading(false);
+    // eslint-disable-next-line
   }, [url]);
 
   useEffect(() => {

@@ -2,11 +2,14 @@ import { headerTestIds } from 'src/testUtils/const/testIds';
 
 interface UserBasketProps {
   itemsInBasket: number;
+  totalPriceBasket: number;
 }
 
-const UserBasket = ({ itemsInBasket }: UserBasketProps) => (
+const UserBasket = ({ itemsInBasket, totalPriceBasket }: UserBasketProps) => (
   <span data-testid={headerTestIds.numberInBasket}>
-    Basket ({itemsInBasket} items)
+    {totalPriceBasket > 0
+      ? `Basket (${itemsInBasket} items, £${totalPriceBasket})`
+      : `Basket (${itemsInBasket} items)`}
   </span>
 );
 
