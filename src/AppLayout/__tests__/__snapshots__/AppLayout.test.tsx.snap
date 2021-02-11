@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppLayout /> Should render correctly 1`] = `
+Array [
+  <header
+    className="sc-bdfBwQ JrDbG"
+  >
+    <div
+      className="sc-dlfnbm NLpQA"
+    >
+      <nav
+        className="sc-gsTCUz fHRLXO"
+      >
+        <a
+          aria-current={null}
+          className="sc-hKgILt cCXpce"
+          href="/store"
+          onClick={[Function]}
+        >
+          Store
+        </a>
+        <a
+          aria-current={null}
+          className="sc-hKgILt cCXpce"
+          href="/basket"
+          onClick={[Function]}
+        >
+          <span
+            data-testid="number-in-basket"
+          >
+            Basket (0 items)
+          </span>
+        </a>
+      </nav>
+    </div>
+  </header>,
+  <main>
+    <div
+      className="sc-eCssSg dzUWXM"
+    >
+      App layout test
+    </div>
+  </main>,
+  <footer
+    className="sc-jSgupP iQrmBW"
+  >
+    <div
+      className="sc-gKsewC cXUyCC"
+    >
+      <span
+        className="sc-iBPRYJ jwpiOS"
+      >
+        Sainsbury’s, Live Well For Less
+      </span>
+      <div>
+        © J Sainsbury plc 
+        2021
+      </div>
+    </div>
+  </footer>,
+]
+`;

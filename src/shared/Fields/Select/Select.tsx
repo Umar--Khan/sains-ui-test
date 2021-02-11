@@ -1,14 +1,12 @@
-import { ChangeEvent } from 'react';
-
-import { FieldOption } from 'declarations/forms';
+import { ChangeEvent, ReactNodeArray } from 'react';
 
 interface SelectProps {
   className?: string;
   name: string;
   onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
-  options: FieldOption<number>[];
+  options: ReactNodeArray;
   placeholder?: string;
-  value: string;
+  value: any;
   id?: string;
 }
 
@@ -31,11 +29,7 @@ const Select = ({
     id={id}
     {...rest}
   >
-    {options.map(({ value, label }) => (
-      <option value={value} key={value}>
-        {label}
-      </option>
-    ))}
+    {options}
   </select>
 );
 

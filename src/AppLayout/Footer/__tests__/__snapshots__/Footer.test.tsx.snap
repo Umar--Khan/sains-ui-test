@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> Should render correctly 1`] = `
+<footer
+  className="sc-bdfBwQ gkkjkl"
+>
+  <div
+    className="sc-gsTCUz efXcWU"
+  >
+    <span
+      className="sc-dlfnbm fXvGP"
+    >
+      Sainsbury’s, Live Well For Less
+    </span>
+    <div>
+      © J Sainsbury plc 
+      2021
+    </div>
+  </div>
+</footer>
+`;

@@ -1,13 +1,18 @@
 import renderer from 'react-test-renderer';
 
-import { quantityOptions } from 'src/const/QuantityOptions';
 import Select from '../Select';
+
+const quantityOptions = Array.from(Array(5).keys()).map(quantity => (
+  <option value={quantity} key={quantity}>
+    {quantity}
+  </option>
+));
 
 describe('<Select />', () => {
   it('Should render correctly', () => {
     const props = {
       onChange: jest.fn(),
-      value: '1',
+      value: 1,
       options: quantityOptions,
       name: 'Qty',
     };

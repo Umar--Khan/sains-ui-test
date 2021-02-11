@@ -4,8 +4,13 @@ exports[`<Select /> Should render correctly 1`] = `
 <select
   name="Qty"
   onChange={[MockFunction]}
-  value="1"
+  value={1}
 >
+  <option
+    value={0}
+  >
+    0
+  </option>
   <option
     value={1}
   >
@@ -25,11 +30,6 @@ exports[`<Select /> Should render correctly 1`] = `
     value={4}
   >
     4
-  </option>
-  <option
-    value={5}
-  >
-    5
   </option>
 </select>
 `;

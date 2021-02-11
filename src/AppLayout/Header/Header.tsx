@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -56,15 +56,23 @@ const NavLink = styled(RouterNavLink)`
 const Header = () => {
   const { basketLocal } = useContext(BasketContext);
 
-  const itemsInBasket = basketLocal?.reduce<number>((acc, { quantity }) => {
-    acc += quantity;
-    return acc;
-  }, 0);
+  const itemsInBasket = useMemo(
+    () =>
+      basketLocal?.reduce<number>((acc, { quantity }) => {
+        acc += quantity;
+        return acc;
+      }, 0),
+    [basketLocal],
+  );
 
-  const totalPriceBasket = basketLocal?.reduce<number>((acc, basketProduct) => {
-    acc += basketProduct.quantity * basketProduct.productDetail.price;
-    return parseFloat(acc.toFixed(2));
-  }, 0);
+  const totalPriceBasket = useMemo(
+    () =>
+      basketLocal?.reduce<number>((acc, basketProduct) => {
+        acc += basketProduct.quantity * basketProduct.productDetail.price;
+        return parseFloat(acc.toFixed(2));
+      }, 0),
+    [basketLocal],
+  );
 
   return (
     <StyledHeader>

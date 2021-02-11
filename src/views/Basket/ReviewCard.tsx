@@ -1,7 +1,8 @@
 import Card from 'src/shared/Card/Card';
-import { Button } from 'src/shared/Buttons';
+import Button from 'src/shared/Buttons/Button/Button';
 import { BasketProduct } from '../Store/Store.d';
 import { ChangeEvent } from 'react';
+import Select from 'src/shared/Fields/Select/Select';
 
 export interface ReviewCardProps {
   basketProduct: BasketProduct;
@@ -43,9 +44,12 @@ const ReviewCard = ({
       </p>
       <p>
         Qty:{' '}
-        <select onChange={e => handleQtySelect(e, productId)} value={quantity}>
-          {renderQtyOptions()}
-        </select>
+        <Select
+          onChange={e => handleQtySelect(e, productId)}
+          value={quantity}
+          options={renderQtyOptions()}
+          name='qty'
+        />
       </p>
 
       <p>Total price: &#163;{(quantity * price).toFixed(2)}</p>

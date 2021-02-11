@@ -17,6 +17,7 @@ exports[`<ReviewCard /> Should render correctly 1`] = `
     Qty:
      
     <select
+      name="qty"
       onChange={[Function]}
       value={5}
     >
